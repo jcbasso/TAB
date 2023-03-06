@@ -32,8 +32,7 @@ public class YellowNumber extends TabFeature {
     private final String rawValue = TAB.getInstance().getConfiguration().getConfig().getString("yellow-number-in-tablist.value", TabConstants.Placeholder.PING);
 
     /** Display type, either INTEGER or HEARTS */
-    private final EnumScoreboardHealthDisplay displayType = TabConstants.Placeholder.HEALTH.equals(rawValue) || "%player_health%".equals(rawValue) ||
-            "%player_health_rounded%".equals(rawValue) ? EnumScoreboardHealthDisplay.HEARTS : EnumScoreboardHealthDisplay.INTEGER;
+    private final EnumScoreboardHealthDisplay displayType = (TAB.getInstance().getConfiguration().getConfig().getString("yellow-number-in-tablist.display-type", "integer") == "hearts") ? EnumScoreboardHealthDisplay.HEARTS : EnumScoreboardHealthDisplay.INTEGER;
 
     /**
      * Constructs new instance and sends debug message that feature loaded.

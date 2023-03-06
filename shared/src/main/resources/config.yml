@@ -82,6 +82,7 @@ scoreboard-teams:
 yellow-number-in-tablist:
   enabled: true
   value: "%ping%"
+  display-type: "integer"
   disable-in-worlds:
     - disabledworld
   disable-in-servers:
